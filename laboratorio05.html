@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 05 - Javascript</title>
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center align-items-center g-2 mb-5">
+            <div class="col-12 col-md-6 col-lg-4">
+                <h2 class="my-3">Veterinario - Baño de Perros</h2>
+                <!-- Input cantidad -->
+                <div class="mb-3">
+                    <label class="form-label" for="txtNumber">Cantidad de Perros<span
+                            class="text-danger">*</span></label>
+                    <input id="txtNumber" name="txtNumber" class="form-control" type="number" required>
+                </div>
+                <!-- Input Tipo de servicio -->
+                <div>
+                    <label class="form-label mb-1" for="txtMascota">Tipo de baño<span 
+                        class="text-danger">*</span></label>
+                </div>
+                <div class="btn-group mb-3" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio1" id="btnBaño" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnBaño">Solo baño</label>
+                
+                    <input type="radio" class="btn-check" name="btnradio1" id="btnBañoCorte" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnBañoCorte">Baño y Corte de pelo</label>
+                </div>
+                
+                
+                <!-- Input Pelaje -->
+                <div>
+                    <label class="form-label mb-1" for="txtMascota">Tipo de pelaje<span 
+                        class="text-danger">*</span></label>
+                </div>
+                
+                <div class="btn-group mb-3" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnRizado" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnRizado">Rizado</label>
+                
+                    <input type="radio" class="btn-check" name="btnradio" id="btnCorto" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnCorto">Corto</label>
+                
+                    <input type="radio" class="btn-check" name="btnradio" id="btnLargo" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnLargo">Largo</label>
+                </div>
+                
+
+                <!-- Input Tamaño -->
+                <div class="mb-5">
+                    <label class="form-label" for="txtMascota">Seleccione el rango de tamaño de su mascota <span
+                            class="text-danger">*</span></label>
+                    <select class="form-select" name="txtMascota" id="txtMascota">
+                        <option value="Mini" selected>Mini</option>
+                        <option value="Pequeño">Pequeño</option>
+                        <option value="Mediano">Mediano</option>
+                        <option value="Grande">Grande</option>
+                        <option value="Muy grande">Muy grande</option>
+                    </select>
+                </div>
+
+                <button id="btnEnviar" class="btn btn-primary">Enviar</button>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="table">
+                <table class="table-primary mb-1 w-100">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">Categoria baño</th>
+                            <th scope="col" class="text-center">Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row" class="text-center">Solo Baño</td>
+                            <td class="text-center">30</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center">Baño y Corte</td>
+                            <td class="text-center">50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table">
+                <table class="table-secondary mb-1 w-100">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">Categoria Tamaño</th>
+                            <th scope="col" class="text-center">Adicional</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row" class="text-center">Mini</td>
+                            <td class="text-center">0</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center">Pequeño</td>
+                            <td class="text-center">5</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center">Mediano</td>
+                            <td class="text-center">10</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center">Grande</td>
+                            <td class="text-center">15</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center">Muy Grande</td>
+                            <td class="text-center">20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="table">
+                <table class="table-success mb-1 w-100">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="text-center">Categoria Pelaje</th>
+                            <th scope="col" class="text-center">Adicional al total %</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row" class="text-center">Rizado</td>
+                            <td class="text-center">5%</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center">Corto</td>
+                            <td class="text-center">0%</td>
+                        </tr>
+                        <tr>
+                            <td scope="row" class="text-center">Largo</td>
+                            <td class="text-center">2%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Cargar jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Cargar Javascript -->
+    <script src="laboratorio05.js"></script>
+
+</body>
+
+</html>
